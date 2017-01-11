@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 11 Janvier 2017 à 10:57
+-- Généré le :  Mer 11 Janvier 2017 à 16:58
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -75,11 +75,20 @@ CREATE TABLE `membre` (
 CREATE TABLE `produit` (
   `id_produit` int(3) NOT NULL,
   `id_salle` int(3) NOT NULL,
-  `date_arrivee` datetime NOT NULL,
-  `date_depart` datetime NOT NULL,
+  `date_arrivee` date NOT NULL,
+  `date_depart` date NOT NULL,
   `prix` int(3) NOT NULL,
   `etat` enum('libre','reservation','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `produit`
+--
+
+INSERT INTO `produit` (`id_produit`, `id_salle`, `date_arrivee`, `date_depart`, `prix`, `etat`) VALUES
+(1, 1, '2016-06-18', '2016-05-23', 1200, 'libre'),
+(2, 2, '2016-06-25', '2016-06-30', 990, 'libre'),
+(3, 3, '2016-07-01', '2016-07-07', 870, 'libre');
 
 -- --------------------------------------------------------
 
@@ -166,7 +175,7 @@ ALTER TABLE `membre`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `id_produit` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produit` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `salle`
 --
