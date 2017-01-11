@@ -1,7 +1,7 @@
 <?php
 
  ?>
- <form action="index.html" method="post">
+ <form action="/libs/services.php?action=inscription" method="post">
   <input type="text" name="pseudo" placeholder="Votre pseudo">
   <input type="password" name="mdp" placeholder="Votre mot de passe">
   <input type="text" name="nom" placeholder="Votre Nom">
