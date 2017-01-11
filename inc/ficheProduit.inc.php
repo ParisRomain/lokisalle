@@ -1,3 +1,6 @@
+<?php
+  include_once('header.inc.php');
+ ?>
 
 <h1><?php //get title produit  ?></h1>
 <button type="button" class="btn btn-success">Réserver</button>

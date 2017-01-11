@@ -21,9 +21,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Espace Membre <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="inc/inscription.php">Inscription</a></li>
-            <li><a href="#">Connexion</a></li>
-            <li><a href="#">Profil</a></li>
+            <li><a href="inc/inscription.inc.php">Inscription</a></li>
+            <li><a href="inc/userConnexion.inc.php">Connexion</a></li>
+            <li><a href="inc/profil.inc.php">Profil</a></li>
           </ul>
         </li>
       </ul>

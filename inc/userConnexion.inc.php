@@ -1,6 +1,3 @@
-<?php 
-
- ?>
 
  <form action="index.php" method="post">
  	<input type="text" name="pseudo" placeholder="Votre pseudo">
