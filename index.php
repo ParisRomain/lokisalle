@@ -8,12 +8,12 @@
   </head>
   <body>
     <header>
-
+      
     </header>
-    <main>
+    <main class="container">
 
     </main>
-    <footer>
+    <footer class="container">
 
     </footer>
   </body>
