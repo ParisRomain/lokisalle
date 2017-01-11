@@ -27,13 +27,16 @@ function inscription() {
 
 			// cryptage du mot de passe
 			$password = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
-
+      /*
+      INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `civilite`, `statut`, `date_enregistrement`) VALUES (NULL, 'test', '123456', 'testeur', 'test', 'test@test.fr', 'f', '', '2017-01-02 00:00:00');
+      */
 			$data = array(
           'pseudo' => $_POST['pseudo'],
-          'pwd'		=> $password,
-          'nom' => $_POST['prenom'],
+          'mdp'		=> $password,
+          'nom' => $_POST['nom'],
+          'prenom' => $_POST['prenom'],
 					'email'	=> $_POST['email'],
-          'sexe' => $_POST['sexe']
+          'civilite' => $_POST['sexe']
 					);
 
 			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite ) VALUES (:pseudo, :mdp :nom, :prenom, :email, :civilite)";
