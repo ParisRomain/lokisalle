@@ -1,6 +1,6 @@
 <div class="row">
         <!-- elements de recherches -->
-        <section class="menuRecherche col-sm-3 col-xs-12">
+        <section class="menuRecherche col-md-3 col-xs-12">
           <h3>Catégorie</h3>
             <div class="btn-group-vertical" role="group" aria-label="categorie">
               <button type="button" class="btn btn-reunion">Réunion</button>
@@ -46,10 +46,30 @@
         </section>
 
         <!-- les restultats de recherche -->
-        <section class="col-sm-3 col-xs-12">
-          <div class="row">
-            <!-- 3 salles -->
-          </div>
+        <section class="resultats col-md-9 col-xs-12">
           
+            
+           
+              <?php 
+                $salles = getSalles();
+                foreach ($salles as $salle)
+                {
+              ?>
+                <div class="col-md-4">
+                   <img src="<?php echo $salle['photo']; ?>" class="img-responsive img-thumbnail">
+
+                   <h3><?php echo $salle['titre']; ?></h3>
+                   <p><b><?php echo $salle['prix']. "€"; ?></b></p>
+
+                   <p><?php echo $salle['description']; ?></p>
+                   <p><?php echo $salle['date_arrivee']." au ".$salle['date_depart']; ?></p>
+
+            
+                </div>
+
+              <?php  
+                } 
+              ?>
+              
         </section>
-      </div>
+</div>
