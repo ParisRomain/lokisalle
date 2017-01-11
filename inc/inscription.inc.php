@@ -1,7 +1,7 @@
 <?php
   require_once("init.inc.php");
  ?>
- <form action="libs/services.php?action=inscription" method="post">
+ <form action="../libs/services.php?action=inscription" method="post">
   <input type="text" name="pseudo" placeholder="Votre pseudo" required="required">
   <input type="password" name="mdp" placeholder="Votre mot de passe" required="required">
   <input type="text" name="nom" placeholder="Votre Nom" required="required">

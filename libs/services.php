@@ -21,12 +21,12 @@ if(!empty($_GET['action'])) {
 }
 
 function inscription() {
-		global $connection;
+		global $connexion;
 
 		if(!empty($_POST['pseudo']) &&  !empty($_POST['mdp']) && !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['sexe']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 
 			// cryptage du mot de passe
-			$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+			$password = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
 
 			$data = array(
           'pseudo' => $_POST['pseudo'],
@@ -38,7 +38,7 @@ function inscription() {
 
 			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite ) VALUES (:pseudo, :mdp :nom, :prenom, :email, :civilite)";
 
-			$req = $connection->prepare($sql);
+			$req = $connexion->prepare($sql);
 
 
 			$req->execute($data);
@@ -47,28 +47,28 @@ function inscription() {
 		}
 	}
 
-	function connexion() {
-		global $connection;
-
-		if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
-
-
-			$data = array(
-				'pseudo'	=> $_POST['pseudo']
-        'mdp' => $_POST['password']);
-
-			$req = "SELECT pseudo, mdp FROM membre WHERE pseudo=:pseudo, mdp=:mdp";
-
-			$req = $connection->prepare($req);
-
-			$req->execute($data);
-
-			$result = $req->fetch();
-
-
-		}
-
-	}
+	// function connexion() {
+	// 	global $connection;
+  //
+	// 	if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
+  //
+  //
+	// 		$data = array(
+	// 			'pseudo'	=> $_POST['pseudo']
+  //       'mdp' => $_POST['password']);
+  //
+	// 		$req = "SELECT pseudo, mdp FROM membre WHERE pseudo=:pseudo, mdp=:mdp";
+  //
+	// 		$req = $connection->prepare($req);
+  //
+	// 		$req->execute($data);
+  //
+	// 		$result = $req->fetch();
+  //
+  //
+	// 	}
+  //
+	// }
 	function logout(){
 		session_destroy();
 		setcookie("user_id", "", time() - 3600);
