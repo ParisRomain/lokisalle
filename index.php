@@ -13,8 +13,11 @@
       include_once('inc/header.inc.php');
        ?>
     </header>
-    <main class="container">
-
+    <main classe="container">
+      <?php 
+      include_once('inc/main.inc.php');
+       ?>
+      
     </main>
 
     <footer class="container">
@@ -22,6 +25,8 @@
       include_once('inc/footer.inc.php');
        ?>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
   </body>
 </html>
