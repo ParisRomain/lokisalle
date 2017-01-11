@@ -39,12 +39,14 @@ function inscription() {
           'civilite' => $_POST['sexe']
 					);
 
-			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite ) VALUES (:pseudo, :mdp :nom, :prenom, :email, :civilite)";
+			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite)";
 
 			$req = $connexion->prepare($sql);
 
 
 			$req->execute($data);
+
+      echo "inscription validée!";
 		}else{
 			die("fail");
 		}
