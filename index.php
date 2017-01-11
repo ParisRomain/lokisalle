@@ -9,7 +9,7 @@
 
   <body>
     <header>
-      <?php 
+      <?php
       include_once('inc/header.inc.php');
        ?>
     </header>
@@ -18,7 +18,9 @@
     </main>
 
     <footer class="container">
-
+      <?php
+      include_once('inc/footer.inc.php');
+       ?>
     </footer>
 
   </body>
