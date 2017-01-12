@@ -6,9 +6,9 @@ session_start();
 if(is_file('./inc/connexion.inc.php')){
 	require('./inc/connexion.inc.php');
 	require_once('./inc/functions.inc.php');
-} else {
+/*} else {
 	require('../inc/connexion.inc.php');
-	require_once('../inc/functions.inc.php');
+	require_once('../inc/functions.inc.php');*/
 }
 
 

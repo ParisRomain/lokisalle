@@ -1,5 +1,8 @@
  <!-- Affichage en tableau de la liste de salles dejà enregistrées + FORM ajout de salle -->
+<?php
+ require_once('../../inc/init.inc.php');
 
+?>
  <form>
  	<label>Titre</label><br>
  		<input type="text" name="titre" placeholder="titre de la salle"><br>
@@ -23,6 +26,8 @@
 		  }
 		  echo '</select>',"\n";
 		?><br>
+	<label>Catégorie</label>
+		<?php echo selectCat(1); ?>
 
 
 

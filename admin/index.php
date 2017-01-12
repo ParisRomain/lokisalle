@@ -1,5 +1,5 @@
 <?php
- require_once('../inc/init.inc.php');
+ require_once('../../inc/init.inc.php');
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
 
     <footer class="container">
       <?php
-      include_once('inc/footer.inc.php');
+      include_once('../inc/footer.inc.php');
        ?>
     </footer>
 
