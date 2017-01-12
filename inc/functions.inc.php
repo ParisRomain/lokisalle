@@ -41,9 +41,10 @@ function getSalles() {
 */
 function getSalles2() {
 	global $connexion;
-	$sql="SELECT id_salle, id_produit, titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit";
+	$sql="SELECT id_salle, id_produit titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit INNER JOIN produit ON salle.id_salle=produit.id_salle";
 	$req = $connexion->prepare($sql);
 	$req->execute();
+	
 	while ($resultat = $req->fetch()) {
 		echo "<tr>";
 			echo "<td>".$resultat['id_produit']."</td>";
