@@ -16,7 +16,9 @@ if(!empty($_GET['action'])) {
       logout();
       break;
 
-    default: break;
+    case 'addSalle':
+    	addSalle();
+    	break;
   }
 }
 
@@ -78,3 +80,24 @@ function inscription() {
 		session_destroy();
 		setcookie("user_id", "", time() - 3600);
 	}
+
+
+/* ajout salle à la  BDD*/
+function addSalle(){
+
+if(isset($_POST['titre']) && isset($_POST['description']) /*&& isset($_POST['photo'])*/ && isset($_POST['capacite']) && isset($_POST['categorie']) && isset($_POST['pays']) && isset($_POST['ville']) && isset($_POST['adresse']) && isset($_POST['cp'])  !=="" ) {
+	
+		$sql = "INSERT INTO `salle` (`titre`, `description`, `photo`, `capacite`, `categorie`, `pays`, `ville`, `adresse`, `cp`) VALUES (:titre, :description, :photo, :capacite, :categorie, :pays, :ville, :adresse, :cp);";
+	
+		$req = $connection->prepare($sql);
+	
+		$datas = array ("titre"=>$_POST['titre'], "description"=>$_POST['description'], "photo"=>$_POST['photo'], "capacite"=>$_POST['capacite'], "categorie"=>$_POST['categorie'], "pays"=>$_POST['pays'], "ville"=>$_POST['ville'], "adresse"=>$_POST['adresse'], "cp"=>$_POST['cp'], );
+	
+		$req->execute($datas);
+	
+	}
+	
+	echo ("Vous venez d'ajouter une salle !");
+
+
+}

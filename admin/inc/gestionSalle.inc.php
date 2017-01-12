@@ -1,6 +1,6 @@
  <!-- Affichage en tableau de la liste de salles dejà enregistrées + FORM ajout de salle -->
 
- <form>
+ <form action="../../libs/services.php?action=addSalle">
 
 	<div class="container">
 		<div class="row">
@@ -52,7 +52,9 @@
 					<textarea name="adresse" placeholder="Adresse de la salle"></textarea><br>
 			
 				<label>Code Postal</label><br>
-					<input type="text" name="cp" placeholder="Code Postal de la salle">
+					<input type="text" name="cp" placeholder="Code Postal de la salle"><br>
+
+				<input type="submit" value="enregistrer">
 			</section>
 		</div>
 	
