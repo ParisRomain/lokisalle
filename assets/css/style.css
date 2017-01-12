@@ -1,3 +1,18 @@
 body {
 	background-image: url(../img/nice_snow.png);
 }
+
+/*Header*/
+
+
+/*Main*/
+
+
+/*Footer*/
+footer{
+	width: 100%;
+
+}
+footer>p{
+	text-align: center;
+}
