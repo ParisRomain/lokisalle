@@ -13,10 +13,19 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#">Qui Somme Nous <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Contact</a></li>
-      </ul>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="admin/inc/gestionSalle.inc.php">Gestion Salles</a></li>
+                  <li><a href="admin/inc/gestionProduit.inc.php">Gestion Produits</a></li>
+                  <li><a href="admin/inc/gestionMembres.inc.php">Gestion Membres</a></li>
+                  <li><a href="admin/inc/gestionCommande.inc.php">Gestion commandes</a></li>
+                  <li><a href="admin/inc/gestionAvis.inc.php">Gestion Avis</a></li>
+                </ul>
+          </li>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Espace Membre <span class="caret"></span></a>
