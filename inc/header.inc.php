@@ -19,11 +19,11 @@
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="admin/index.php?page=gestionSalle">Gestion Salles</a></li>
-                  <li><a href="admin/inc/gestionProduit.inc.php">Gestion Produits</a></li>
-                  <li><a href="admin/inc/gestionMembres.inc.php">Gestion Membres</a></li>
-                  <li><a href="admin/inc/gestionCommande.inc.php">Gestion commandes</a></li>
-                  <li><a href="admin/inc/gestionAvis.inc.php">Gestion Avis</a></li>
+                  <li><a href="http://localhost/lokisalle/admin/index.php?page=gestionSalle">Gestion Salles</a></li>
+                  <li><a href="http://localhost/lokisalle/admin/index.php?page=gestionProduit">Gestion Produits</a></li>
+                  <li><a href="http://localhost/lokisalle/admin/index.php?page=gestionMembres">Gestion Membres</a></li>
+                  <li><a href="http://localhost/lokisalle/admin/index.php?page=gestionCommande">Gestion commandes</a></li>
+                  <li><a href="http://localhost/lokisalle/admin/index.php?page=gestionAvis">Gestion Avis</a></li>
                 </ul>
           </li>
       <ul class="nav navbar-nav navbar-right">

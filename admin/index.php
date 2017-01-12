@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lokisalle</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
   </head>
 
@@ -21,13 +21,13 @@
     </header>
     <main classe="container">
 
-    <?php 
+    <?php
     // On appelle la Vue correspondant à la page demandée
     if (!empty($_GET['page'])) { // Si l'utilisateur cherche à atteindre une page...
       if (file_exists('./inc/' . $_GET['page'] . '.inc.php')) { // On vérifie si elle existe : si oui, on l'inclut
-        include('./inc/' . $_GET['page'] . '.inc.php');   
+        include('./inc/' . $_GET['page'] . '.inc.php');
       } else { // Sinon, on inclut la page erreur 404
-        include('./inc/404.inc.php');   
+        include('./inc/404.inc.php');
       }
     } else { // Sinon, c'est que l'utilisateur est sur la page d'accueil
       include('./inc/home.inc.php');
