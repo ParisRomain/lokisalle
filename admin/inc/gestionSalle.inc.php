@@ -1,10 +1,5 @@
  <!-- Affichage en tableau de la liste de salles dejà enregistrées + FORM ajout de salle -->
 
-
-
-
-
-
  <form>
  	<label>Titre</label><br>
  		<input type="text" name="titre" placeholder="titre de la salle"><br>
@@ -28,8 +23,12 @@
 		  }
 		  echo '</select>',"\n";
 		?><br>
-	<label>Catégorie</label>
-		<?php echo selectCat(); ?>
+	<label>Catégorie</label> <br>
+		<select>
+			<option>bureau</option>
+			<option>formation</option>
+			<option>reunion</option>
+		</select>
 
 
 

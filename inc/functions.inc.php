@@ -13,8 +13,9 @@ function getSalles() {
 
 	return $data;
 }
+
 /* affichage des categories en menu deroulant*/
-function selectCat($valueSelected="") {
+/*function selectCat($valueSelected="") {
 	global $connexion;
 
 	$sql = "SELECT * FROM salle ORDER BY categorie ASC";
@@ -22,6 +23,7 @@ function selectCat($valueSelected="") {
 
 	$req = $connexion->prepare($sql);
 
+<<<<<<< HEAD
 			try {
 				$req->execute();
 			}catch(Exception $e) {
@@ -38,6 +40,25 @@ function selectCat($valueSelected="") {
 }
 function getSalles2() {
 	global $connexion;
+=======
+	try {
+		$req->execute();
+	}catch(Exception $e) {
+		var_dump($e);
+	}
+	
+	$html = "<select name='categorie' >";
+	while($datas = $req->fetch()){
+	
+		$selected=($datas['categorie']==$valueSelected)? "selected" : "";
+		
+		$html .= "<option value='".$datas['categorie']."' ".$selected.">".datas	['categorie']." </option>";
+	}
+
+	$html .="</select>";
+	echo $html; }*/
+
+>>>>>>> origin/master
 
 	$sql="SELECT id_salle, id_produit, titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit";
 
