@@ -16,20 +16,15 @@
             </div>
 
           <h3>Capacité</h3>
-            <select>
-              <option value="moins10">moins de 10</option>
-              <option value="10a30">10 à 30</option>
-              <option value="30a50">30 à 50</option>
-              <option value="50a70">50 à 70</option>
-              <option value="70a100">70 à 100</option>
-              <option value="plus100">plus de 100</option>
+            <select class="1-500">
+              
             </select>
 
          <!--  <h3>Prix</h3>
             <input type="range" value="500" max="1800" min="0" step="5" name="prix" list="prix">  -->
 
           <h3>Période</h3>
-            
+
 
         </section>
 

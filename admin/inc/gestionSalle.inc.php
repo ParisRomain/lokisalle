@@ -31,7 +31,6 @@
 					  }
 					  echo '</select>',"\n";
 					?><br>
-					
 				<label>Catégorie</label> <br>
 					<select name="categorie">
 						<option>bureau</option>

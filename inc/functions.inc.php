@@ -56,3 +56,5 @@ function getSalles2() {
 		echo "</tr>";
 	}
 }
+
+
