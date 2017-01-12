@@ -23,7 +23,7 @@
       <?php
       include_once('inc/main.inc.php');
        ?>
-
+       <a href="admin/inc/gestionSalle.inc.php">form salle</a>
     </main>
 
     <footer class="container">
