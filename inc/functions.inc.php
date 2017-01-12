@@ -23,7 +23,7 @@ function getSalles() {
 
 	$req = $connexion->prepare($sql);
 
-<<<<<<< HEAD
+
 			try {
 				$req->execute();
 			}catch(Exception $e) {
@@ -38,33 +38,12 @@ function getSalles() {
 			$html .="</select>";
 			echo $html;
 }
+*/
 function getSalles2() {
 	global $connexion;
-=======
-	try {
-		$req->execute();
-	}catch(Exception $e) {
-		var_dump($e);
-	}
-	
-	$html = "<select name='categorie' >";
-	while($datas = $req->fetch()){
-	
-		$selected=($datas['categorie']==$valueSelected)? "selected" : "";
-		
-		$html .= "<option value='".$datas['categorie']."' ".$selected.">".datas	['categorie']." </option>";
-	}
-
-	$html .="</select>";
-	echo $html; }*/
-
->>>>>>> origin/master
-
 	$sql="SELECT id_salle, id_produit, titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit";
-
 	$req = $connexion->prepare($sql);
 	$req->execute();
-
 	while ($resultat = $req->fetch()) {
 		echo "<tr>";
 			echo "<td>".$resultat['id_produit']."</td>";
@@ -74,6 +53,5 @@ function getSalles2() {
 			echo "<td>".$resultat['prix']."€"."</td>";
 			echo "<td>".$resultat['etat']."</td>";
 		echo "</tr>";
-
 	}
 }
