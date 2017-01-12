@@ -29,29 +29,7 @@
             <input type="range" value="500" max="1800" min="0" step="5" name="prix" list="prix">  -->
 
           <h3>Période</h3>
-            <div id="calendarMain" class="calendarMain"></div>
-                <script type="text/javascript">
-                //<![CDATA[
-                var myCalendar = new jsSimpleDatePickr();
-                myCalendar.CalAdd({
-                'divId': 'calendarMain',
-                'buttonTitle': 'Date d\'arrivée',
-                'inputFieldId': 'Date d\'arrivée',
-                'callBack': arrivee,
-                'dateMask': 'JJ/MM/AAAA',
-                'dateCentury': 20,
-                'titleMask': 'M AAAA',
-                'navType': '01',
-                'classTable': 'jsCalendar',
-                'classDay': 'day',
-                'classDaySelected': 'selectedDay',
-                'monthLst': ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-                'dayLst': ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
-                'hideOnClick': false,
-                'showOnLaunch': true
-                });
-                //]]>
-                </script>
+            
 
         </section>
 

@@ -1,6 +1,6 @@
  <!-- Affichage en tableau de la liste de salles dejà enregistrées + FORM ajout de salle -->
 
- <form action="../../libs/services.php?action=addSalle">
+ <form action="../libs/services.php?action=addSalle" method="post">
 
 	<div class="container">
 		<div class="row">
@@ -8,10 +8,13 @@
 			<section class="col-md-6">
 	 			<label>Titre</label><br>
 	 				<input type="text" name="titre" placeholder="titre de la salle"><br>
+
 	 			<label>Description</label><br>
 	 				<textarea name="description" placeholder="Description de la salle"></textarea><br>
+
 	 			 <label>Photo</label><br>
-	 				<input type="image" name="photo" value="parcourir..">	 	ajouter une photo<br>
+	 				<input type="image" name="photo" value="parcourir..">ajouter une photo<br>
+
 	  			<label>Capacité</label><br>
 	 				<?php //boucle pour afficher la capacité en menu 			deroulant
 					  // Variable qui ajoutera l'attribut selected 	de la 		liste déroulante
@@ -28,6 +31,7 @@
 					  }
 					  echo '</select>',"\n";
 					?><br>
+					
 				<label>Catégorie</label> <br>
 					<select name="categorie">
 						<option>bureau</option>
