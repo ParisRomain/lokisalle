@@ -81,4 +81,31 @@ function inscription() {
 		setcookie("user_id", "", time() - 3600);
 	}
 
+function addSalle() {
+	global $connexion;
+
+	if(!empty($_POST['titre']) &&  !empty($_POST['description']) &&   !empty($_POST['capacite']) && !empty($_POST['categorie']) && !empty($_POST['pays']) && !empty($_POST['ville']) && !empty($_POST['adresse']) && !empty($_POST['cp'])) {
+
+		$data = array(
+       'titre' => $_POST['titre'],
+       'description'	=> $_POST['description'],
+       'capacite' => $_POST['capacite'],
+		'categorie'	=> $_POST['categorie'],
+       'pays' => $_POST['pays'],
+       'ville' => $_POST['ville'],
+       'adresse' => $_POST['adresse'],
+       'cp' => $_POST['cp']
+				);
+
+		$sql = "INSERT INTO salle (titre, description, capacite, categorie, pays, ville, adresse, cp ) VALUES (:titre, :description, :capacite, :categorie, :pays, :ville, :adresse, :cp)";
+
+		$req = $connexion->prepare($sql);
+
+		$req->execute($data);
+
+      echo "Salle Ajoutée!";
+	}else{
+		die("fail");
+	}
+}
 
