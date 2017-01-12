@@ -33,13 +33,13 @@ function inscription() {
       INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `civilite`, `statut`, `date_enregistrement`) VALUES (NULL, 'test', '123456', 'testeur', 'test', 'test@test.fr', 'f', '', '2017-01-02 00:00:00');
       */
 			$data = array(
-          'pseudo' => $_POST['pseudo'],
-          'mdp'		=> $password,
-          'nom' => $_POST['nom'],
-          'prenom' => $_POST['prenom'],
-					'email'	=> $_POST['email'],
-          'civilite' => $_POST['sexe']
-					);
+          	'pseudo' 	=> $_POST['pseudo'],
+          	'mdp'		=> $password,
+          	'nom' 		=> $_POST['nom'],
+          	'prenom' 	=> $_POST['prenom'],
+			'email'		=> $_POST['email'],
+          	'civilite' 	=> $_POST['sexe']
+			);
 
 			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite)";
 
@@ -87,15 +87,15 @@ function addSalle() {
 	if(!empty($_POST['titre']) &&  !empty($_POST['description']) &&   !empty($_POST['capacite']) && !empty($_POST['categorie']) && !empty($_POST['pays']) && !empty($_POST['ville']) && !empty($_POST['adresse']) && !empty($_POST['cp'])) {
 
 		$data = array(
-       'titre' => $_POST['titre'],
-       'description'	=> $_POST['description'],
-       'capacite' => $_POST['capacite'],
-		'categorie'	=> $_POST['categorie'],
-       'pays' => $_POST['pays'],
-       'ville' => $_POST['ville'],
-       'adresse' => $_POST['adresse'],
-       'cp' => $_POST['cp']
-				);
+        'titre' 		=> $_POST['titre'],
+        'description'	=> $_POST['description'],
+        'capacite'		=> $_POST['capacite'],
+		'categorie'		=> $_POST['categorie'],
+      	'pays' 			=> $_POST['pays'],
+      	'ville' 		=> $_POST['ville'],
+      	'adresse' 		=> $_POST['adresse'],
+      	'cp' 			=> $_POST['cp']
+		);
 
 		$sql = "INSERT INTO salle (titre, description, capacite, categorie, pays, ville, adresse, cp ) VALUES (:titre, :description, :capacite, :categorie, :pays, :ville, :adresse, :cp)";
 
