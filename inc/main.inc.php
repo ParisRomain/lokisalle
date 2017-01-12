@@ -29,20 +29,8 @@
             <input type="range" value="500" max="1800" min="0" step="5" name="prix" list="prix">  -->
 
           <h3>Période</h3>
-          <p>Date d'arrivée</p>
-          <div class="input-group date" data-provide="datepicker">
-            <input type="text" class="form-control">
-              <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-th"></span>
-              </div>
-          </div>
-          <p>Date de départ</p>
-          <div class="input-group date" data-provide="datepicker">
-            <input type="text" class="form-control">
-              <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-th"></span>
-              </div>
-          </div>
+
+
         </section>
 
         <!-- les restultats de recherche -->
