@@ -19,7 +19,7 @@
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="admin/inc/gestionSalle.inc.php">Gestion Salles</a></li>
+                  <li><a href="admin/index.php?page=gestionSalle">Gestion Salles</a></li>
                   <li><a href="admin/inc/gestionProduit.inc.php">Gestion Produits</a></li>
                   <li><a href="admin/inc/gestionMembres.inc.php">Gestion Membres</a></li>
                   <li><a href="admin/inc/gestionCommande.inc.php">Gestion commandes</a></li>

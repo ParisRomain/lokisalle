@@ -4,11 +4,14 @@
 session_start();
 //bien require le fichier functions et le fichier loginDB
 if(is_file('./inc/connexion.inc.php')){
+	echo 'toto';
 	require('./inc/connexion.inc.php');
 	require_once('./inc/functions.inc.php');
-/*} else {
+} else {
+	echo 'titi';
+
 	require('../inc/connexion.inc.php');
-	require_once('../inc/functions.inc.php');*/
+	require_once('../inc/functions.inc.php');
 }
 
 

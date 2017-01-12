@@ -12,15 +12,15 @@ function getSalles() {
 	$data = $req->fetchAll();
 
 	return $data;
-
+}
 /* affichage des categories en menu deroulant*/
 function selectCat($valueSelected="") {
 	global $connexion;
 
-	$sql = "SELECT * FROM salle ORDER BY categorie ASC";
+	$sql = "SELECT categorie FROM salle";
 	
 	
-	$req = $connection->prepare($sql);
+	$req = $connexion->prepare($sql);
 
 			try {
 				$req->execute();
