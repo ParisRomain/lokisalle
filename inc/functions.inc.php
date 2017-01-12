@@ -13,8 +13,9 @@ function getSalles() {
 
 	return $data;
 }
+
 /* affichage des categories en menu deroulant*/
-function selectCat($valueSelected="") {
+/*function selectCat($valueSelected="") {
 	global $connexion;
 
 	$sql = "SELECT categorie FROM salle";
@@ -22,20 +23,23 @@ function selectCat($valueSelected="") {
 	
 	$req = $connexion->prepare($sql);
 
-			try {
-				$req->execute();
-			}catch(Exception $e) {
-				var_dump($e);
-			}
-			
-			$html = "<select name='categorie' >";
-			while($datas = $req->fetch()){
-			$selected=($datas['categorie']==$valueSelected)? "selected" : "";
-			$html .= "<option value='".$datas['categorie']."' ".$selected.">".$datas['categorie']." </option>";
-			}
-			$html .="</select>";
-			echo $html;
-}
+	try {
+		$req->execute();
+	}catch(Exception $e) {
+		var_dump($e);
+	}
+	
+	$html = "<select name='categorie' >";
+	while($datas = $req->fetch()){
+	
+		$selected=($datas['categorie']==$valueSelected)? "selected" : "";
+		
+		$html .= "<option value='".$datas['categorie']."' ".$selected.">".datas	['categorie']." </option>";
+	}
+
+	$html .="</select>";
+	echo $html; }*/
+
 
 
 
