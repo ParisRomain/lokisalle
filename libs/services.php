@@ -83,29 +83,57 @@ function inscription() {
 
 
 /* ajout salle à la  BDD*/
-function addSalle(){
+/*function addSalle(){
 	global $connexion;
-	if(isset($_POST['titre']) && isset($_POST['description']) /*&& isset($_POST['photo'])*/ && isset($_POST['capacite']) && isset($_POST['categorie']) && isset($_POST['pays']) && isset($_POST['ville']) && isset($_POST['adresse']) && isset($_POST['cp'])  !=="" ) {
-	
+	if(isset($_POST['titre']) && isset($_POST['description']) /*&& isset($_POST['photo'])&& isset($_POST['capacite']) && isset($_POST['categorie']) && isset($_POST['pays']) && isset($_POST['ville']) && isset($_POST['adresse']) && isset($_POST['cp'])  !=="" ) {
+
 		$sql = "INSERT INTO `salle` (`titre`, `description`, `photo`, `capacite`, `categorie`, `pays`, `ville`, `adresse`, `cp`) VALUES (:titre, :description, :photo, :capacite, :categorie, :pays, :ville, :adresse, :cp);";
-	
+
 		$req = $connexion->prepare($sql);
-	
-		$datas = array ("titre"			=>$_POST['titre'], 
-						"description"	=>$_POST['description'], 
-						"photo"			=>$_POST['photo'], 
-						"capacite"		=>$_POST['capacite'], 
-						"categorie"		=>$_POST['categorie'], 
-						"pays"			=>$_POST['pays'], 
-						"ville"			=>$_POST['ville'], 
-						"adresse"		=>$_POST['adresse'], 
+
+		$datas = array ("titre"			=>$_POST['titre'],
+						"description"	=>$_POST['description'],
+						"photo"			=>$_POST['photo'],
+						"capacite"		=>$_POST['capacite'],
+						"categorie"		=>$_POST['categorie'],
+						"pays"			=>$_POST['pays'],
+						"ville"			=>$_POST['ville'],
+						"adresse"		=>$_POST['adresse'],
 						"cp"			=>$_POST['cp'], );
-	
+
 		$req->execute($datas);
-	
+
 	}
-	
+
 	echo ("Vous venez d'ajouter une salle !");
 
 
-}
+}*/
+
+function addSalle() {
+		global $connexion;
+
+		if(!empty($_POST['titre']) &&  !empty($_POST['description']) &&   !empty($_POST['capacite']) && !empty($_POST['categorie']) && !empty($_POST['pays']) && !empty($_POST['ville']) && !empty($_POST['adresse']) && !empty($_POST['cp'])) {
+
+			$data = array(
+          'tite' => $_POST['titre'],
+          'description'	=> $_POST['description'],
+          'capacite' => $_POST['capacite'],
+					'categorie'	=> $_POST['categorie'],
+          'pays' => $_POST['pays'],
+          'ville' => $_POST['ville'],
+          'adresse' => $_POST['adresse'],
+          'cp' => $_POST['cp']
+					);
+
+			$sql = "INSERT INTO salle (titre, description, capacite, categorie, pays, ville, adresse, cp ) VALUES (:titre, :description, :capacite, :categorie, :pays, :ville, :adresse, :cp)";
+
+			$req = $connexion->prepare($sql);
+
+			$req->execute($data);
+
+      echo "Salle Ajoutée!";
+		}else{
+			die("fail");
+		}
+	}

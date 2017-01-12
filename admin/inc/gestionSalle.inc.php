@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<div class="row">
-	
+
 			<section class="col-md-6">
 	 			<label>Titre</label><br>
 	 				<input type="text" name="titre" placeholder="titre de la salle"><br>
@@ -19,7 +19,7 @@
 	 				<?php //boucle pour afficher la capacité en menu 			deroulant
 					  // Variable qui ajoutera l'attribut selected 	de la 		liste déroulante
 					  $selected = '';
-					 
+
 					  // Parcours du tableau
 					  echo '<select name="capacite">',"\n";
 					  for($i=1; $i<=500; $i++)
@@ -31,7 +31,7 @@
 					  }
 					  echo '</select>',"\n";
 					?><br>
-					
+
 				<label>Catégorie</label> <br>
 					<select name="categorie">
 						<option>bureau</option>
@@ -45,23 +45,23 @@
 					<select name="pays">
 						<option>France</option>
 					</select><br>
-			
+
 				<label>Ville</label><br>
 					<select name="ville">
 						<option>Lyon</option>
 						<option>Paris</option>
 					</select><br>
-			
+
 				<label>Adresse</label><br>
 					<textarea name="adresse" placeholder="Adresse de la salle"></textarea><br>
-			
+
 				<label>Code Postal</label><br>
 					<input type="text" name="cp" placeholder="Code Postal de la salle"><br>
 
 				<input type="submit" value="enregistrer">
 			</section>
 		</div>
-	
+
 	</div>
 
  </form>
