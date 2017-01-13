@@ -75,7 +75,8 @@ function afficheMembres() {
 
 	$data = array ();
 	$req->execute($data);
-	$datas = $req->fetch();
+
+	while ($datas = $req->fetch()) {
 
 	echo"<tr>";
 	echo "<td>".$datas['id_membre']." "."</td>";
@@ -88,4 +89,5 @@ function afficheMembres() {
 	echo "<td>".$datas['date_enregistrement']." "."</td>";
 	echo "<td><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <i class=\"fa fa-trash\" aria-hidden=\"true\"></i></td>";
 	echo "</tr>";
+	}
 }
