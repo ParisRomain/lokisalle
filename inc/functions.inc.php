@@ -32,6 +32,7 @@ function getProduits() {
 			echo "<td>".$resultat['id_salle']."</td>";
 			echo "<td>".$resultat['prix']."€"."</td>";
 			echo "<td>".$resultat['etat']."</td>";
+			echo "<td><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <i class=\"fa fa-trash\" aria-hidden=\"true\"></i></td>";
 		echo "</tr>";
 	}
 }
@@ -45,7 +46,7 @@ function afficheSalles() {
 
 	$data = array ();
 	$req->execute($data);
-	
+
 
 	while ($datas = $req->fetch()) {
 
@@ -60,6 +61,7 @@ function afficheSalles() {
 			echo "<td>".$datas['cp']." "."</td>";
 			echo "<td>".$datas['capacite']." "."</td>";
 			echo "<td>".$datas['categorie']." "."</td>";
+			echo "<td><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <i class=\"fa fa-trash\" aria-hidden=\"true\"></i></td>";
 		echo "</tr>";
 	}
 }
@@ -84,5 +86,6 @@ function afficheMembres() {
 	echo "<td>".$datas['civilite']." "."</td>";
 	echo "<td>".$datas['statut']." "."</td>";
 	echo "<td>".$datas['date_enregistrement']." "."</td>";
+	echo "<td><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <i class=\"fa fa-trash\" aria-hidden=\"true\"></i></td>";
 	echo "</tr>";
 }
