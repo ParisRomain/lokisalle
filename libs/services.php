@@ -41,10 +41,10 @@ function inscription() {
           	'nom' 		=> $_POST['nom'],
           	'prenom' 	=> $_POST['prenom'],
 			'email'		=> $_POST['email'],
-          	'civilite' 	=> $_POST['sexe']
+          	'civilite' 	=> $_POST['civilite']
 			);
 
-			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite)";
+			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite, date_enregistrement ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite, NOW())";
 
 			$req = $connexion->prepare($sql);
 
