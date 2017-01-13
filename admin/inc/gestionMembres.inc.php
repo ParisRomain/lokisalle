@@ -1,4 +1,4 @@
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <h3>Nos membres </h3>
   <div class="container">
     <div class="row">
@@ -12,15 +12,15 @@
           <th>civilité</th>
           <th>statut</th>
           <th>date d'enregistrement</th>
-          <th>action</th>     
-        </tr> 
+          <th>action</th>
+        </tr>
         <?php echo afficheMembres(); ?>
       </table>
     </div>
   </div>
 <hr>
 <form action="../libs/services.php?action=inscription" method="post">
-  	
+
 	<div class="container">
  		<div class="row">
 

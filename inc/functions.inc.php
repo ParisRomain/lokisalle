@@ -97,8 +97,8 @@ function selectSalle() {
 	global $connexion;
 
 	$sql = "SELECT * FROM salle ORDER BY titre ASC";
-	
-	
+
+
 	$req = $connexion->prepare($sql);
 
 			try {
@@ -106,7 +106,7 @@ function selectSalle() {
 			}catch(Exception $e) {
 				var_dump($e);
 			}
-			
+
 			$html = "<select name='id' >";
 			while($datas = $req->fetch()){
 
