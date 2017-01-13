@@ -57,4 +57,26 @@ function getSalles2() {
 	}
 }
 
+function afficheMembres() {
+	global $connexion;
+
+	$sql="SELECT * FROM membre ";
+	$req = $connexion->prepare($sql);
+
+	$data = array ();
+	$req->execute($data);
+	$datas = $req->fetch();
+
+	echo"<tr>";
+	echo "<td>".$datas['id_membre']." "."</td>";
+	echo "<td>".$datas['pseudo']." "."</td>";
+	echo "<td>".$datas['nom']." "."</td>";
+	echo "<td>".$datas['prenom']." "."</td>";
+	echo "<td>".$datas['email']." "."</td>";
+	echo "<td>".$datas['civilite']." "."</td>";
+	echo "<td>".$datas['statut']." "."</td>";
+	echo "<td>".$datas['date_enregistrement']." "."</td>";
+	echo "</tr>";		
+}
+
 
