@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 11 Janvier 2017 à 16:58
+-- Généré le :  Ven 13 Janvier 2017 à 17:02
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -66,6 +66,15 @@ CREATE TABLE `membre` (
   `date_enregistrement` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `membre`
+--
+
+INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `civilite`, `statut`, `date_enregistrement`) VALUES
+(1, 'Sven', '$2y$10$0kaE8G68PRugws8HELyyM..gFSznJYOKYiaQ4QtcBVhk5AVrnRCDG', 'Sven', 'Reinder', 'sven@frozen.com', 'm', 0, '0000-00-00 00:00:00'),
+(4, 'test', '$2y$10$qyK5gPJxXZOx/LM89kxqmu02MpaPzAue3xxIPIRONeKDVWCAolyi6', 'test', 'test', 'klfjdkls@sds.Fr', '', 0, '2017-01-13 12:01:05'),
+(5, 'lasttest', '$2y$10$iLPOVLjorEq0a5y0fDvNgeUMx3kjcUkCNyruHFLu00N0UlL/1hzdS', 'testa', 'test', 'hdh@ere.fr', 'f', 0, '2017-01-13 12:02:19');
+
 -- --------------------------------------------------------
 
 --
@@ -106,7 +115,7 @@ CREATE TABLE `salle` (
   `adresse` varchar(50) NOT NULL,
   `cp` int(5) NOT NULL,
   `capacite` int(3) NOT NULL,
-  `categorie` enum('reunion','bureaux','formation') NOT NULL
+  `categorie` enum('reunion','bureau','formation') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -116,7 +125,7 @@ CREATE TABLE `salle` (
 INSERT INTO `salle` (`id_salle`, `titre`, `description`, `photo`, `pays`, `ville`, `adresse`, `cp`, `capacite`, `categorie`) VALUES
 (1, 'Cézanne', 'Cette salle sera parfaite pour vos réunions d''entreprise', 'assets/img/cezanne.jpg', 'France', 'Paris', '30 rue Mademoiselle', 75015, 30, 'reunion'),
 (2, 'Mozart', 'Cette salle vous permettra de recevoir vos collaborateurs en petit comité', 'assets/img/mozart.jpg', 'France', 'Paris', '17 rue de Turbigo', 75002, 5, 'reunion'),
-(3, 'Picasso', 'Cette salle vous permettre de travailler au calme', 'assets/img/picasso.jpg', 'France', 'Lyon', '28 quai Claude Bernard', 69007, 2, 'bureaux');
+(3, 'Picasso', 'Cette salle vous permettra de travailler au calme', 'assets/img/picasso.jpg', 'France', 'Lyon', '28 quai Claude Bernard', 69007, 2, '');
 
 --
 -- Index pour les tables exportées
@@ -170,7 +179,7 @@ ALTER TABLE `commande`
 -- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
-  MODIFY `id_membre` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_membre` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `produit`
 --
