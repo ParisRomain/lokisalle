@@ -11,7 +11,8 @@
           <th>email</th>
           <th>civilité</th>
           <th>statut</th>
-          <th>date d'enregistrement</th>     
+          <th>date d'enregistrement</th>
+          <th>action</th>     
         </tr> 
         <?php echo afficheMembres(); ?>
       </table>
