@@ -8,8 +8,8 @@
     <input type="text" name="prenom" placeholder="Votre Prénom" required="required">
     <input type="email" name="email" placeholder="Votre Email" required="required">
     <select name="civilite" required="required">
-      <option value="Femme">Femme</option>
-      <option value="Homme">Homme</option>
+      <option value="f">Femme</option>
+      <option value="m">Homme</option>
     </select>
     <input type="submit" value="Inscription">
 </form>

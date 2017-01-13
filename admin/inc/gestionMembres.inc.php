@@ -43,8 +43,8 @@
 
   				<label>Genre</label><br>
   				<select name="civilite" required="required">
-  				  <option value="Femme">Femme</option>
-  				  <option value="Homme">Homme</option>
+  				  <option value="f">Femme</option>
+  				  <option value="m">Homme</option>
   				</select><br>
 
   				<input type="submit" value="Inscription">
