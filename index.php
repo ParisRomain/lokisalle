@@ -23,8 +23,18 @@
     </header>
     <main classe="container">
       <?php
-      include_once('inc/main.inc.php');
-       ?>
+      // On appelle la Vue correspondant à la page demandée
+      if (!empty($_GET['page'])) { // Si l'utilisateur cherche à atteindre une page...
+        if (file_exists('./inc/' . $_GET['page'] . '.inc.php')) { // On vérifie si elle existe : si oui, on l'inclut
+          include('./inc/' . $_GET['page'] . '.inc.php');
+        } else { // Sinon, on inclut la page erreur 404
+          include('./inc/404.inc.php');
+        }
+      } else { // Sinon, c'est que l'utilisateur est sur la page d'accueil
+        include('./inc/main.inc.php');
+      }
+    ?>
+    
     </main>
 
     <footer class="container">
