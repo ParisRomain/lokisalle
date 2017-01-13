@@ -19,6 +19,9 @@ if(!empty($_GET['action'])) {
     case 'addSalle':
     	addSalle();
     	break;
+    case 'reservation':
+      reservation();
+      break;
   }
 }
 
@@ -90,7 +93,7 @@ function addSalle() {
         'titre' 		=> $_POST['titre'],
         'description'	=> $_POST['description'],
         'capacite'		=> $_POST['capacite'],
-		'categorie'		=> $_POST['categorie'],
+		    'categorie'		=> $_POST['categorie'],
       	'pays' 			=> $_POST['pays'],
       	'ville' 		=> $_POST['ville'],
       	'adresse' 		=> $_POST['adresse'],
@@ -108,4 +111,15 @@ function addSalle() {
 	}else{
 		die("fail");
 	}
+}
+
+function reservation(){
+  global $connexion;
+
+  if (!empty($_POST['arrive']) && !empty($_POST['depart']) && !empty($_POST['salle']) && !empty($_POST['prix'])) {
+
+    $data = array(
+      
+    );
+  }
 }
