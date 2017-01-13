@@ -18,12 +18,12 @@ function getSalles() {
 
 function getProduits() {
 	global $connexion;
-	$sql="SELECT id_salle, id_produit, titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit INNER JOIN produit ON salle.id_salle=produit.id_salle";
+	$sql="SELECT * FROM salle INNER JOIN produit ON salle.id_salle=produit.id_salle";
 	$req = $connexion->prepare($sql);
 
 	$data = array();
 	$req->execute($data);
-	$resultat = $req->fetch();
+	while ($resultat = $req->fetch()) {
 
 		echo "<tr>";
 			echo "<td>".$resultat['id_produit']."</td>";
@@ -34,6 +34,7 @@ function getProduits() {
 			echo "<td>".$resultat['etat']."</td>";
 		echo "</tr>";
 	}
+}
 
 
 function afficheSalles() {
@@ -44,20 +45,23 @@ function afficheSalles() {
 
 	$data = array ();
 	$req->execute($data);
-	$datas = $req->fetch();
+	
 
-	echo"<tr>";
-		echo "<td>".$datas['id_salle']." "."</td>";
-		echo "<td>".$datas['titre']." "."</td>";
-		echo "<td>".$datas['description']." "."</td>";
-		echo "<td>".$datas['photo']." "."</td>";
-		echo "<td>".$datas['pays']." "."</td>";
-		echo "<td>".$datas['ville']." "."</td>";
-		echo "<td>".$datas['adresse']." "."</td>";
-		echo "<td>".$datas['cp']." "."</td>";
-		echo "<td>".$datas['capacite']." "."</td>";
-		echo "<td>".$datas['categorie']." "."</td>";
-	echo "</tr>";
+	while ($datas = $req->fetch()) {
+
+		echo"<tr>";
+			echo "<td>".$datas['id_salle']." "."</td>";
+			echo "<td>".$datas['titre']." "."</td>";
+			echo "<td>".$datas['description']." "."</td>";
+			echo "<td>".$datas['photo']." "."</td>";
+			echo "<td>".$datas['pays']." "."</td>";
+			echo "<td>".$datas['ville']." "."</td>";
+			echo "<td>".$datas['adresse']." "."</td>";
+			echo "<td>".$datas['cp']." "."</td>";
+			echo "<td>".$datas['capacite']." "."</td>";
+			echo "<td>".$datas['categorie']." "."</td>";
+		echo "</tr>";
+	}
 }
 
 
