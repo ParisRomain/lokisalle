@@ -1,6 +1,18 @@
 <?php
   include_once('header.inc.php');
- ?>
+?>
+
+<?php if(isset($_GET['salles'])){
+  $data = array('id_salle'=>$_GET['salles']);
+  $sql = "SELECT * FROM salle WHERE id_salle=:salles";
+
+  $req = $connexion->prepare($sql);
+  $req->execute($data);
+  $resultat = $req->fetch();
+
+?>
+
+ 
 
 <h1></h1>
 <button type="button" class="btn btn-success">Réserver</button>
