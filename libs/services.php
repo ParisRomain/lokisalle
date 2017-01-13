@@ -44,7 +44,7 @@ function inscription() {
           	'civilite' 	=> $_POST['civilite']
 			);
 
-			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite, date_enregistrement ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite, NOW())";
+			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite/*, date_enregistrement*/ ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite/*, NOW()*/)";
 
 			$req = $connexion->prepare($sql);
 
