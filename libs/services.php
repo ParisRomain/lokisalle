@@ -28,7 +28,7 @@ if(!empty($_GET['action'])) {
 function inscription() {
 		global $connexion;
 
-		if(!empty($_POST['pseudo']) &&  !empty($_POST['mdp']) && !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['sexe']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+		if(!empty($_POST['pseudo']) &&  !empty($_POST['mdp']) && !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['civilite']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 
 			// cryptage du mot de passe
 			$password = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
@@ -44,7 +44,7 @@ function inscription() {
           	'civilite' 	=> $_POST['civilite']
 			);
 
-			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite/*, date_enregistrement*/ ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite/*, NOW()*/)";
+			$sql = "INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite, date_enregistrement ) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :civilite, NOW())";
 
 			$req = $connexion->prepare($sql);
 
