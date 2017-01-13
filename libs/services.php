@@ -21,6 +21,9 @@ if(!empty($_GET['action'])) {
     	break;
     case 'reservation':
       reservation();
+
+    case 'delete':
+    	delete();
       break;
   }
 }
@@ -135,3 +138,5 @@ function reservation(){
     die("fail");
   }
 }
+
+
