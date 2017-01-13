@@ -87,9 +87,10 @@ function afficheMembres() {
 	echo "<td>".$datas['civilite']." "."</td>";
 	echo "<td>".$datas['statut']." "."</td>";
 	echo "<td>".$datas['date_enregistrement']." "."</td>";
-	echo "<td><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <i class=\"fa fa-trash\" aria-hidden=\"true\"></i></td>";
+	echo "<td> <a href=\"http://localhost/lokisalle/admin/index.php?page=supprimer\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></td>";
 	echo "</tr>";
 	}
+
 }
 
 
