@@ -12,10 +12,15 @@
           <th>adresse</th>
           <th>cp</th>
           <th>capacité</th>
-          <th>catégorie</th> 
-          <th>action</th>    
-        </tr> 
-        <?php echo afficheSalles(); ?>
+          <th>catégorie</th>
+          <th>action</th>
+
+        </tr>
+        <tr>
+          <?php echo afficheSalles(); ?>
+        </tr>
+
+
       </table>
     </div>
   </div>

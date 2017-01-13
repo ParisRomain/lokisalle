@@ -1,6 +1,6 @@
  <!-- requete sql des salles
   photo, nom, prix, description, date -->
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <?php
 
 function getSalles() {
@@ -25,14 +25,15 @@ function getProduits() {
 	$req->execute($data);
 	while ($resultat = $req->fetch()) {
 
-		echo "<tr>";
+
 			echo "<td>".$resultat['id_produit']."</td>";
 			echo "<td>".$resultat['date_arrivee']."</td>";
 			echo "<td>".$resultat['date_depart']."</td>";
 			echo "<td>".$resultat['id_salle']."</td>";
 			echo "<td>".$resultat['prix']."€"."</td>";
 			echo "<td>".$resultat['etat']."</td>";
-		echo "</tr>";
+			echo "<td> <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i> <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></td>";
+
 	}
 }
 
@@ -60,6 +61,7 @@ function afficheSalles() {
 			echo "<td>".$datas['cp']." "."</td>";
 			echo "<td>".$datas['capacite']." "."</td>";
 			echo "<td>".$datas['categorie']." "."</td>";
+			echo "<td> <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i> <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></td>";
 		echo "</tr>";
 	}
 }
@@ -84,9 +86,21 @@ function afficheMembres() {
 	echo "<td>".$datas['civilite']." "."</td>";
 	echo "<td>".$datas['statut']." "."</td>";
 	echo "<td>".$datas['date_enregistrement']." "."</td>";
+	echo "<td> <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i> <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></td>";
 	echo "</tr>";
 }
 
 function modifySalle(){
+	global $connexion;
 
+
+}
+function deleteSalle(){
+	global $connexion;
+
+	$sql = "DELETE FROM salle WHERE id_salle";
+
+	$req = $connexion->prepare($sql);
+	$req->bindParam(':id_salle', $_POST['id_salle'], PDO::PARAM_INT);
+	$req->execute();
 }
