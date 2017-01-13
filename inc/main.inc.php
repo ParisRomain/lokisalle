@@ -38,9 +38,9 @@
 
               <?php
                 $salles = getSalles();
-
+               
                 foreach ($salles as $salle)
-                {
+                { 
 
 
               ?>

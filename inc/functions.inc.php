@@ -18,7 +18,7 @@ function getSalles() {
 
 function getProduits() {
 	global $connexion;
-	$sql="SELECT * FROM salle INNER JOIN produit ON salle.id_salle=produit.id_salle";
+	$sql="SELECT id_salle, id_produit, titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle INNER JOIN produit ON salle.id_salle=produit.id_salle";
 	$req = $connexion->prepare($sql);
 
 	$data = array();
@@ -45,7 +45,7 @@ function afficheSalles() {
 
 	$data = array ();
 	$req->execute($data);
-
+	
 
 	while ($datas = $req->fetch()) {
 
@@ -85,8 +85,4 @@ function afficheMembres() {
 	echo "<td>".$datas['statut']." "."</td>";
 	echo "<td>".$datas['date_enregistrement']." "."</td>";
 	echo "</tr>";
-}
-
-function modifySalle(){
-
 }
