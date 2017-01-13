@@ -1,1 +1,1 @@
-bonjour
+<h1>Bienvenu sur votre espace administrateur</h1>
