@@ -18,7 +18,7 @@ function getSalles() {
 
 function getProduits() {
 	global $connexion;
-	$sql="SELECT id_salle, id_produit titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit INNER JOIN produit ON salle.id_salle=produit.id_salle";
+	$sql="SELECT id_salle, id_produit, titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit INNER JOIN produit ON salle.id_salle=produit.id_salle";
 	$req = $connexion->prepare($sql);
 
 	$data = array();
