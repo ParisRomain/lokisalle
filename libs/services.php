@@ -103,9 +103,9 @@ function addSalle() {
 
 		$req->execute($data);
 
-      echo "Salle Ajoutée!";
+    //  echo "Salle Ajoutée!";
+      header('Location: ../index.php');
 	}else{
 		die("fail");
 	}
 }
-

@@ -14,37 +14,12 @@ function getSalles() {
 	return $data;
 }
 
-/* affichage des categories en menu deroulant*/
-/*function selectCat($valueSelected="") {
-	global $connexion;
-
-	$sql = "SELECT * FROM salle ORDER BY categorie ASC";
-
-
-	$req = $connexion->prepare($sql);
-
-
-			try {
-				$req->execute();
-			}catch(Exception $e) {
-				var_dump($e);
-			}
-
-			$html = "<select name='categorie' >";
-			while($datas = $req->fetch()){
-			$selected=($datas['categorie']==$valueSelected)? "selected" : "";
-			$html .= "<option value='".$datas['categorie']."' ".$selected.">".$datas['categorie']." </option>";
-			}
-			$html .="</select>";
-			echo $html;
-}
-*/
 function getSalles2() {
 	global $connexion;
 	$sql="SELECT id_salle, id_produit titre, description, photo, prix, date_arrivee, date_depart, etat FROM salle, produit INNER JOIN produit ON salle.id_salle=produit.id_salle";
 	$req = $connexion->prepare($sql);
 	$req->execute();
-	
+
 	while ($resultat = $req->fetch()) {
 		echo "<tr>";
 			echo "<td>".$resultat['id_produit']."</td>";
@@ -78,5 +53,3 @@ function afficheMembres() {
 	echo "<td>".$datas['date_enregistrement']." "."</td>";
 	echo "</tr>";		
 }
-
-
