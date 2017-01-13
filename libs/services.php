@@ -119,7 +119,20 @@ function reservation(){
   if (!empty($_POST['arrive']) && !empty($_POST['depart']) && !empty($_POST['salle']) && !empty($_POST['prix'])) {
 
     $data = array(
-      
+      'arrive' => $_POST['arrive'],
+      'depart' => $_POST['depart'],
+      'salle'  => $_POST['salle'],
+      'prix'   => $_POST['prix']
     );
+
+    $sql = "INSERT INTO produit (arrive, depart, salle, prix) VALUES(:arrive, :depart, :salle, :prix)";
+
+    $req = $connexion->prepare($sql);
+
+    $req->execute($data);
+
+    echo "Salle réservé";
+  }else{
+    die("fail");
   }
 }
