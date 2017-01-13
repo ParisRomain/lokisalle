@@ -53,7 +53,8 @@ function inscription() {
 
 			$req->execute($data);
 
-      echo "inscription validée!";
+      //echo "inscription validée!";
+      header('Location: http://localhost/lokisalle/index.php?page=index');
 		}else{
 			die("fail");
 		}
@@ -138,5 +139,3 @@ function reservation(){
     die("fail");
   }
 }
-
-
