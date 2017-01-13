@@ -27,6 +27,9 @@
           <label>Date de départ</label><br>
           <input type="text" name="depart"id="datepicker"><br>
           <label>Salle</label><br>
+          <?php 
+            echo selectSalle();
+          ?><br>
           <label>Tarif</label><br>
           <input type="text" name="prix" placeholder="prix en €" required="required"><br>
 

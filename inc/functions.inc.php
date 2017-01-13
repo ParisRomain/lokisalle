@@ -91,3 +91,28 @@ function afficheMembres() {
 	echo "</tr>";
 	}
 }
+
+
+function selectSalle() {
+	global $connexion;
+
+	$sql = "SELECT * FROM salle ORDER BY titre ASC";
+	
+	
+	$req = $connexion->prepare($sql);
+
+			try {
+				$req->execute();
+			}catch(Exception $e) {
+				var_dump($e);
+			}
+			
+			$html = "<select name='id' >";
+			while($datas = $req->fetch()){
+
+			$html .= "<option value='".$datas['id_salle']."'>".$datas['titre']." </option>";
+			}
+			$html .="</select>";
+			echo $html;
+
+}
