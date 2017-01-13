@@ -1,3 +1,6 @@
+<?php
+  $salles = getSalles();
+ ?>
 <div class="row">
         <!-- elements de recherches -->
         <section class="menuRecherche col-md-3 col-xs-12">
@@ -17,7 +20,7 @@
 
           <h3>Capacité</h3>
             <select class="1-500">
-              
+
             </select>
 
          <!--  <h3>Prix</h3>
@@ -35,18 +38,20 @@
 
               <?php
                 $salles = getSalles();
+
                 foreach ($salles as $salle)
                 {
+
+
               ?>
                 <div class="col-md-4">
                    <img src="<?php echo $salle['photo']; ?>" class="img-responsive img-thumbnail">
 
-                   <a href="ficheProduit.inc.php"><h3><?php echo $salle['titre']; ?></h3></a>
+                   <a href="http://localhost/lokisalle/index.php?page=ficheProduit&id=<?php echo $salle['id_salle']; ?>"><?php echo $salle['titre']; ?></a>
                    <p><b><?php echo $salle['prix']. "€"; ?></b></p>
 
                    <p><?php echo $salle['description']; ?></p>
                    <p><?php echo $salle['date_arrivee']." au ".$salle['date_depart']; ?></p>
-
 
                 </div>
 

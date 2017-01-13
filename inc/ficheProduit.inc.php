@@ -2,7 +2,7 @@
   include_once('header.inc.php');
  ?>
 
-<h1><?php echo $salle['titre']; ?></h1>
+<h1></h1>
 <button type="button" class="btn btn-success">Réserver</button>
 <section class="container">
   <div class="row">
@@ -11,7 +11,7 @@
     </aside>
     <article class="col-sm-3">
       <div class="description">
-        <?php echo $salle['description']; ?>
+        
       </div>
       <div class="gmap">
         <?php //get gmap produit ?>
@@ -21,8 +21,8 @@
   <div class="row">
     <h4>Informations complèmentaires</h4>
     <section class="col-md-4 col-sm-12">
-      <p><?php  echo $salle['date_arrivee'] ?></p>
-      <p><?php  echo $salle['date_depart'] ?></p>
+      <p></p>
+      <p></p>
     </section>
     <section class="col-md-4 col-sm-12">
       <p><?php  // get capacity?></p>
