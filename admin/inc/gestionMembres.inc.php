@@ -17,7 +17,7 @@
       </table>
     </div>
   </div>
-
+<hr>
 <form action="../libs/services.php?action=inscription" method="post">
   	
 	<div class="container">

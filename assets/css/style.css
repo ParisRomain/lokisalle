@@ -104,14 +104,14 @@ body {
 /*affichage des tableaux*/
  	table {
 	border: medium solid #000000;
-	width: 60%;
+	width: auto;
 	text-align: center;
 
 	}
 
 	td, th {
 	border: thin solid lightblue;
-	width: 50%;
+	width: 40%;
 	padding: 10px 5px 10px 5px; 
 	text-align: center;
 	}

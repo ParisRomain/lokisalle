@@ -1,3 +1,25 @@
+<h3>Nos salles </h3>
+  <div class="container">
+    <div class="row">
+      <table class="center-block">
+        <tr>
+          <th>id salle</th>
+          <th>titre</th>
+          <th>description</th>
+          <th>photo</th>
+          <th>pays</th>
+          <th>ville</th>
+          <th>adresse</th>
+          <th>cp</th>
+          <th>capacité</th>
+          <th>catégorie</th> 
+          <th>action</th>    
+        </tr> 
+        <?php echo afficheSalles(); ?>
+      </table>
+    </div>
+  </div>
+  <hr>
 
   <form action="../libs/services.php?action=addSalle" method="post">
 

@@ -56,7 +56,7 @@ function inscription() {
 		}
 	}
 
-	 function connexion() {
+function connexion() {
 	 	global $connexion;
 
 	 	if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
@@ -76,10 +76,9 @@ function inscription() {
 			$result = $req->fetch();
       header('Location: ../index.php');
 	 	}
-
 	}
 
-	function logout(){
+function logout(){
 		session_destroy();
 		setcookie("user_id", "", time() - 3600);
 	}

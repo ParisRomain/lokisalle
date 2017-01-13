@@ -34,6 +34,31 @@ function getProduits() {
 	}
 }
 
+function afficheSalles() {
+	global $connexion;
+
+	$sql="SELECT * FROM salle ";
+	$req = $connexion->prepare($sql);
+
+	$data = array ();
+	$req->execute($data);
+	$datas = $req->fetch();
+
+	echo"<tr>";
+	echo "<td>".$datas['id_salle']." "."</td>";
+	echo "<td>".$datas['titre']." "."</td>";
+	echo "<td>".$datas['description']." "."</td>";
+	echo "<td>".$datas['photo']." "."</td>";
+	echo "<td>".$datas['pays']." "."</td>";
+	echo "<td>".$datas['ville']." "."</td>";
+	echo "<td>".$datas['adresse']." "."</td>";
+	echo "<td>".$datas['cp']." "."</td>";
+	echo "<td>".$datas['capacite']." "."</td>";
+	echo "<td>".$datas['categorie']." "."</td>";
+	echo "</tr>";
+}
+
+
 function afficheMembres() {
 	global $connexion;
 
